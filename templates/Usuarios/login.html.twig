@@ -1,0 +1,22 @@
+{{ templates/Usuarios/login.html.twig }}
+{% extends 'app.html.twig' %}
+
+{% block title %}Login{% endblock %}
+
+{% block body %}
+{% if error %}
+	<div>{{error.messageKey|trans(error.messageData, 'security')}}</div>
+{% endif %}
+
+<a href="{{path('registro_usuario')}}">Registrese</a>
+<br>
+<form action="{{path('articulos')}}" method="POST">
+	<label for="username">Nombre de usuario: </label>
+	<input type="text" id="username" name="_username" value="{{last_username}}">
+	
+	<label for="passwowrd">Contraseña: </label>
+	<input type="password" id="password" name="_password">
+
+	<button type="submit">Entrar</button>
+</form>
+{% endblock %}

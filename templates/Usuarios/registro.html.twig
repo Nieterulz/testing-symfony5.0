@@ -1,7 +1,13 @@
-{# templates/Usuarios7registro.html.twig #}
-{{form_start(form)}}
-	{{form_row(form.username)}}
-	{{form_row(form.email)}}
-	{{form_row(form.first)}}
-	{{form_row(form.second)}}
-{{form_end(form)}}	
+{# templates/Usuarios/registro.html.twig #}
+{% extends 'app.html.twig' %}
+{% block title %}Registro de usuario{% endblock %}
+{% block body %}
+Pulse <a href="{{parh('homepage')}}">aqui</a> para entrar en su cuenta.
+<br>
+{{ form_start(form) }}
+	{{ form_row(form.username) }}
+	{{ form_row(form.email) }}
+	{{ form_row(form.password.first) }}
+	{{ form_row(form.password.second) }}
+{{ form_end(form) }}
+{% endblock %}
