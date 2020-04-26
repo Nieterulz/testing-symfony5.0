@@ -1,0 +1,9 @@
+{# templates/Articulos/unArticulo.html.twig #}
+
+{% extends 'app.html.twig' %}
+{% block body %}
+	<a href="{{path('articulos')}}">Ver todos los artículos</a>
+	<h2>{{art.titulo}}</h2>
+	<h3>{{art.descripcion}}</h3>
+	<p>{{art.cuerpo}}</p>
+{% endblock %}

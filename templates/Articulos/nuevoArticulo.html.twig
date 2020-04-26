@@ -1,0 +1,10 @@
+{# templates/Articulos/nuevoArticulo.html.twig #}
+
+{% extends 'app.html.twig' %}
+{% block body %}
+	<a href="{{path('articulos')}}">Volver a la pantalla principal</a>
+	<br>
+	{{ form_start(form) }}
+	{{ form_widget(form) }}
+	{{ form_end(form) }}
+{% endblock %}

@@ -1,0 +1,14 @@
+{# templates/Articulos/mostrarTodos.html.twig #}
+
+{% extends 'app.html.twig' %}
+{% block body %}
+	<h2>Bienvenido a la web sobre articulos</h2>
+	<a href="{{path('insertar_articulo')}}">Añadir artículo</a>
+	<p>Estos son los artículos publicados</p>
+	{% for art in articulos %}
+		<a href="{{path('mostrar_un_articulo', {'id':art.id})}}">
+			<h3>{{art.titulo}}</h3>
+		</a>
+		<p>{{art.descripcion}}</p>
+	{% endfor %}
+{% endblock %}
