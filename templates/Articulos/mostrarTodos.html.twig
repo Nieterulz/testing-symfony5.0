@@ -4,6 +4,9 @@
 {% block body %}
 	<h2>Bienvenido a la web sobre articulos</h2>
 	<a href="{{path('insertar_articulo')}}">Añadir artículo</a>
+	<br>
+	<a href="{{path('logout')}}">Salir</a>
+	
 	<p>Estos son los artículos publicados</p>
 	{% for art in articulos %}
 		<a href="{{path('mostrar_un_articulo', {'id':art.id})}}">

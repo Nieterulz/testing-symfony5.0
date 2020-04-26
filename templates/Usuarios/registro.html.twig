@@ -1,8 +1,10 @@
 {# templates/Usuarios/registro.html.twig #}
 {% extends 'app.html.twig' %}
+
 {% block title %}Registro de usuario{% endblock %}
+
 {% block body %}
-Pulse <a href="{{parh('homepage')}}">aqui</a> para entrar en su cuenta.
+Pulse <a href="{{path('index')}}">aqui</a> para entrar en su cuenta.
 <br>
 {{ form_start(form) }}
 	{{ form_row(form.username) }}

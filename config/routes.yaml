@@ -1,7 +1,14 @@
 index:
    path: /
-   controller: App\Controller\DefaultController::index
+   controller: App\Controller\DefaultController::loginAction
+
+registro_usuario:
+    path: /nuevo/Usuario
+    controller: App\Controller\UsuariosController::registro
 
 insertar_articulo:
     path: /nuevo/Articulo
     controller: App\Controller\ArticulosController::nuevoArticulo
+    
+logout:
+    path: /logout/
